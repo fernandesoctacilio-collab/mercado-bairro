@@ -5,10 +5,10 @@
     "category": "Hortifruti",
     "price": 5.49,
     "unit": "kg",
-    "stock_qty": 2,
-    "image": "https://images.unsplash.com/photo-1516684669134-de6f26a0b22b?auto=format&fit=crop&w=800&q=60",
-    "barcode": "4549641664999",
-    "on_promo": true,
+    "stock_qty": 70,
+    "image": "assets/img/hortifruti/01.jpg",
+    "barcode": "8720690527398",
+    "on_promo": false,
     "promo_price": 3.29
   },
   {
@@ -17,11 +17,11 @@
     "category": "Hortifruti",
     "price": 9.99,
     "unit": "kg",
-    "stock_qty": 4,
-    "image": "https://images.unsplash.com/photo-1516684669134-de6f26a0b22b?auto=format&fit=crop&w=800&q=60",
-    "barcode": "9446437886243",
-    "on_promo": false,
-    "promo_price": 6.5
+    "stock_qty": 77,
+    "image": "assets/img/hortifruti/02.jpg",
+    "barcode": "7504133085826",
+    "on_promo": true,
+    "promo_price": 7.84
   },
   {
     "id": 3,
@@ -29,11 +29,11 @@
     "category": "Hortifruti",
     "price": 4.79,
     "unit": "kg",
-    "stock_qty": 57,
-    "image": "https://images.unsplash.com/photo-1516684669134-de6f26a0b22b?auto=format&fit=crop&w=800&q=60",
-    "barcode": "9699674681144",
+    "stock_qty": 79,
+    "image": "assets/img/hortifruti/03.jpg",
+    "barcode": "1108925567253",
     "on_promo": false,
-    "promo_price": 2.87
+    "promo_price": 3.92
   },
   {
     "id": 4,
@@ -41,11 +41,11 @@
     "category": "Hortifruti",
     "price": 8.49,
     "unit": "kg",
-    "stock_qty": 0,
-    "image": "https://images.unsplash.com/photo-1516684669134-de6f26a0b22b?auto=format&fit=crop&w=800&q=60",
-    "barcode": "8705854613063",
-    "on_promo": true,
-    "promo_price": 5.24
+    "stock_qty": 63,
+    "image": "assets/img/hortifruti/04.jpg",
+    "barcode": "5469128305797",
+    "on_promo": false,
+    "promo_price": 7.7
   },
   {
     "id": 5,
@@ -53,9 +53,9 @@
     "category": "Hortifruti",
     "price": 3.99,
     "unit": "un.",
-    "stock_qty": 64,
-    "image": "https://images.unsplash.com/photo-1516684669134-de6f26a0b22b?auto=format&fit=crop&w=800&q=60",
-    "barcode": "2198980042900",
+    "stock_qty": 49,
+    "image": "assets/img/hortifruti/05.jpg",
+    "barcode": "3034479917733",
     "on_promo": false,
     "promo_price": 2.39
   },
@@ -65,11 +65,11 @@
     "category": "Hortifruti",
     "price": 13.9,
     "unit": "kg",
-    "stock_qty": 8,
-    "image": "https://images.unsplash.com/photo-1516684669134-de6f26a0b22b?auto=format&fit=crop&w=800&q=60",
-    "barcode": "9910841357144",
+    "stock_qty": 58,
+    "image": "assets/img/hortifruti/06.jpg",
+    "barcode": "9713432545162",
     "on_promo": false,
-    "promo_price": 12.45
+    "promo_price": 10.55
   },
   {
     "id": 7,
@@ -77,11 +77,11 @@
     "category": "Hortifruti",
     "price": 4.49,
     "unit": "kg",
-    "stock_qty": 36,
-    "image": "https://images.unsplash.com/photo-1516684669134-de6f26a0b22b?auto=format&fit=crop&w=800&q=60",
-    "barcode": "6565749403245",
-    "on_promo": false,
-    "promo_price": 2.76
+    "stock_qty": 23,
+    "image": "assets/img/hortifruti/07.jpg",
+    "barcode": "4559820986859",
+    "on_promo": true,
+    "promo_price": 2.86
   },
   {
     "id": 8,
@@ -89,11 +89,11 @@
     "category": "Hortifruti",
     "price": 5.99,
     "unit": "kg",
-    "stock_qty": 45,
-    "image": "https://images.unsplash.com/photo-1516684669134-de6f26a0b22b?auto=format&fit=crop&w=800&q=60",
-    "barcode": "2168999569965",
+    "stock_qty": 58,
+    "image": "assets/img/hortifruti/08.jpg",
+    "barcode": "4541959643994",
     "on_promo": false,
-    "promo_price": 3.59
+    "promo_price": 5.37
   },
   {
     "id": 9,
@@ -101,11 +101,11 @@
     "category": "Hortifruti",
     "price": 6.49,
     "unit": "kg",
-    "stock_qty": 47,
-    "image": "https://images.unsplash.com/photo-1516684669134-de6f26a0b22b?auto=format&fit=crop&w=800&q=60",
-    "barcode": "9289335072925",
+    "stock_qty": 43,
+    "image": "assets/img/hortifruti/09.jpg",
+    "barcode": "8142295167340",
     "on_promo": false,
-    "promo_price": 5.85
+    "promo_price": 3.89
   },
   {
     "id": 10,
@@ -113,11 +113,11 @@
     "category": "Hortifruti",
     "price": 6.99,
     "unit": "kg",
-    "stock_qty": 35,
-    "image": "https://images.unsplash.com/photo-1516684669134-de6f26a0b22b?auto=format&fit=crop&w=800&q=60",
-    "barcode": "3865718657338",
-    "on_promo": true,
-    "promo_price": 4.19
+    "stock_qty": 75,
+    "image": "assets/img/hortifruti/10.jpg",
+    "barcode": "6068195444614",
+    "on_promo": false,
+    "promo_price": 4.78
   },
   {
     "id": 11,
@@ -125,11 +125,11 @@
     "category": "Frios",
     "price": 42.9,
     "unit": "kg",
-    "stock_qty": 34,
-    "image": "https://images.unsplash.com/photo-1604908554023-6a21b1f138b0?auto=format&fit=crop&w=800&q=60",
-    "barcode": "6795763123120",
+    "stock_qty": 76,
+    "image": "assets/img/frios/01.jpg",
+    "barcode": "2815232028351",
     "on_promo": false,
-    "promo_price": 41.64
+    "promo_price": 42.01
   },
   {
     "id": 12,
@@ -137,11 +137,11 @@
     "category": "Frios",
     "price": 44.9,
     "unit": "kg",
-    "stock_qty": 25,
-    "image": "https://images.unsplash.com/photo-1604908554023-6a21b1f138b0?auto=format&fit=crop&w=800&q=60",
-    "barcode": "1525865301813",
+    "stock_qty": 38,
+    "image": "assets/img/frios/02.jpg",
+    "barcode": "7676695507723",
     "on_promo": true,
-    "promo_price": 43.08
+    "promo_price": 40.29
   },
   {
     "id": 13,
@@ -149,11 +149,11 @@
     "category": "Frios",
     "price": 34.9,
     "unit": "kg",
-    "stock_qty": 23,
-    "image": "https://images.unsplash.com/photo-1604908554023-6a21b1f138b0?auto=format&fit=crop&w=800&q=60",
-    "barcode": "2006771481855",
+    "stock_qty": 41,
+    "image": "assets/img/frios/03.jpg",
+    "barcode": "5626213332926",
     "on_promo": false,
-    "promo_price": 33.84
+    "promo_price": 32.04
   },
   {
     "id": 14,
@@ -161,11 +161,11 @@
     "category": "Frios",
     "price": 59.9,
     "unit": "kg",
-    "stock_qty": 17,
-    "image": "https://images.unsplash.com/photo-1604908554023-6a21b1f138b0?auto=format&fit=crop&w=800&q=60",
-    "barcode": "9779690743221",
-    "on_promo": false,
-    "promo_price": 55.17
+    "stock_qty": 51,
+    "image": "assets/img/frios/04.jpg",
+    "barcode": "9101078182290",
+    "on_promo": true,
+    "promo_price": 59.17
   },
   {
     "id": 15,
@@ -173,11 +173,11 @@
     "category": "Frios",
     "price": 6.99,
     "unit": "un.",
-    "stock_qty": 24,
-    "image": "https://images.unsplash.com/photo-1604908554023-6a21b1f138b0?auto=format&fit=crop&w=800&q=60",
-    "barcode": "6326987952120",
+    "stock_qty": 41,
+    "image": "assets/img/frios/05.jpg",
+    "barcode": "5613484791682",
     "on_promo": false,
-    "promo_price": 4.82
+    "promo_price": 4.19
   },
   {
     "id": 16,
@@ -185,10 +185,10 @@
     "category": "Frios",
     "price": 3.49,
     "unit": "un.",
-    "stock_qty": 45,
-    "image": "https://images.unsplash.com/photo-1604908554023-6a21b1f138b0?auto=format&fit=crop&w=800&q=60",
-    "barcode": "5065091491644",
-    "on_promo": false,
+    "stock_qty": 76,
+    "image": "assets/img/frios/06.jpg",
+    "barcode": "3272110133443",
+    "on_promo": true,
     "promo_price": 2.09
   },
   {
@@ -197,9 +197,9 @@
     "category": "Frios",
     "price": 5.99,
     "unit": "L",
-    "stock_qty": 30,
-    "image": "https://images.unsplash.com/photo-1604908554023-6a21b1f138b0?auto=format&fit=crop&w=800&q=60",
-    "barcode": "4405077675728",
+    "stock_qty": 49,
+    "image": "assets/img/frios/07.jpg",
+    "barcode": "8283846760426",
     "on_promo": false,
     "promo_price": 3.59
   },
@@ -209,10 +209,10 @@
     "category": "Frios",
     "price": 5.99,
     "unit": "L",
-    "stock_qty": 77,
-    "image": "https://images.unsplash.com/photo-1604908554023-6a21b1f138b0?auto=format&fit=crop&w=800&q=60",
-    "barcode": "5076697892193",
-    "on_promo": true,
+    "stock_qty": 70,
+    "image": "assets/img/frios/08.jpg",
+    "barcode": "6212669833026",
+    "on_promo": false,
     "promo_price": 3.59
   },
   {
@@ -221,11 +221,11 @@
     "category": "Frios",
     "price": 12.9,
     "unit": "un.",
-    "stock_qty": 68,
-    "image": "https://images.unsplash.com/photo-1604908554023-6a21b1f138b0?auto=format&fit=crop&w=800&q=60",
-    "barcode": "7060187866304",
-    "on_promo": false,
-    "promo_price": 10.4
+    "stock_qty": 43,
+    "image": "assets/img/frios/09.jpg",
+    "barcode": "4416738599994",
+    "on_promo": true,
+    "promo_price": 8.38
   },
   {
     "id": 20,
@@ -233,11 +233,11 @@
     "category": "Frios",
     "price": 9.9,
     "unit": "un.",
-    "stock_qty": 50,
-    "image": "https://images.unsplash.com/photo-1604908554023-6a21b1f138b0?auto=format&fit=crop&w=800&q=60",
-    "barcode": "1393923112547",
+    "stock_qty": 28,
+    "image": "assets/img/frios/10.jpg",
+    "barcode": "6607623009898",
     "on_promo": false,
-    "promo_price": 6.42
+    "promo_price": 7.0
   },
   {
     "id": 21,
@@ -245,11 +245,11 @@
     "category": "Açougue",
     "price": 39.9,
     "unit": "kg",
-    "stock_qty": 18,
-    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=60",
-    "barcode": "2528604771969",
-    "on_promo": true,
-    "promo_price": 36.25
+    "stock_qty": 55,
+    "image": "assets/img/acougue/01.jpg",
+    "barcode": "0987225599543",
+    "on_promo": false,
+    "promo_price": 39.11
   },
   {
     "id": 22,
@@ -257,11 +257,11 @@
     "category": "Açougue",
     "price": 19.9,
     "unit": "kg",
-    "stock_qty": 38,
-    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=60",
-    "barcode": "2989045773330",
+    "stock_qty": 53,
+    "image": "assets/img/acougue/02.jpg",
+    "barcode": "9474461538623",
     "on_promo": false,
-    "promo_price": 15.66
+    "promo_price": 17.73
   },
   {
     "id": 23,
@@ -269,11 +269,11 @@
     "category": "Açougue",
     "price": 29.9,
     "unit": "kg",
-    "stock_qty": 17,
-    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=60",
-    "barcode": "2273617445979",
+    "stock_qty": 35,
+    "image": "assets/img/acougue/03.jpg",
+    "barcode": "8929432078956",
     "on_promo": false,
-    "promo_price": 29.12
+    "promo_price": 28.7
   },
   {
     "id": 24,
@@ -281,11 +281,11 @@
     "category": "Açougue",
     "price": 79.9,
     "unit": "kg",
-    "stock_qty": 40,
-    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=60",
-    "barcode": "6473361360191",
-    "on_promo": false,
-    "promo_price": 77.69
+    "stock_qty": 48,
+    "image": "assets/img/acougue/04.jpg",
+    "barcode": "0239219693738",
+    "on_promo": true,
+    "promo_price": 76.61
   },
   {
     "id": 25,
@@ -293,11 +293,11 @@
     "category": "Açougue",
     "price": 32.9,
     "unit": "kg",
-    "stock_qty": 14,
-    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=60",
-    "barcode": "3942964488869",
-    "on_promo": false,
-    "promo_price": 31.53
+    "stock_qty": 31,
+    "image": "assets/img/acougue/05.jpg",
+    "barcode": "2709861267338",
+    "on_promo": true,
+    "promo_price": 30.97
   },
   {
     "id": 26,
@@ -305,11 +305,11 @@
     "category": "Açougue",
     "price": 21.9,
     "unit": "kg",
-    "stock_qty": 41,
-    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=60",
-    "barcode": "8900528201977",
-    "on_promo": false,
-    "promo_price": 21.4
+    "stock_qty": 20,
+    "image": "assets/img/acougue/06.jpg",
+    "barcode": "5102929439376",
+    "on_promo": true,
+    "promo_price": 17.21
   },
   {
     "id": 27,
@@ -317,11 +317,11 @@
     "category": "Açougue",
     "price": 14.9,
     "unit": "kg",
-    "stock_qty": 38,
-    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=60",
-    "barcode": "9170431504970",
+    "stock_qty": 30,
+    "image": "assets/img/acougue/07.jpg",
+    "barcode": "5229136629519",
     "on_promo": false,
-    "promo_price": 13.66
+    "promo_price": 13.31
   },
   {
     "id": 28,
@@ -329,11 +329,11 @@
     "category": "Açougue",
     "price": 54.9,
     "unit": "kg",
-    "stock_qty": 21,
-    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=60",
-    "barcode": "9234145810472",
+    "stock_qty": 79,
+    "image": "assets/img/acougue/08.jpg",
+    "barcode": "1149849923442",
     "on_promo": false,
-    "promo_price": 54.0
+    "promo_price": 53.52
   },
   {
     "id": 29,
@@ -341,11 +341,11 @@
     "category": "Açougue",
     "price": 16.9,
     "unit": "kg",
-    "stock_qty": 78,
-    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=60",
-    "barcode": "8487660033746",
+    "stock_qty": 48,
+    "image": "assets/img/acougue/09.jpg",
+    "barcode": "1196911172628",
     "on_promo": true,
-    "promo_price": 15.15
+    "promo_price": 14.76
   },
   {
     "id": 30,
@@ -353,11 +353,11 @@
     "category": "Açougue",
     "price": 28.9,
     "unit": "kg",
-    "stock_qty": 72,
-    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=60",
-    "barcode": "4822264831826",
+    "stock_qty": 79,
+    "image": "assets/img/acougue/10.jpg",
+    "barcode": "1543880726428",
     "on_promo": false,
-    "promo_price": 23.99
+    "promo_price": 25.92
   },
   {
     "id": 31,
@@ -365,11 +365,11 @@
     "category": "Mercearia",
     "price": 29.9,
     "unit": "kg",
-    "stock_qty": 0,
-    "image": "https://images.unsplash.com/photo-1525253086316-d0c936c814f8?auto=format&fit=crop&w=800&q=60",
-    "barcode": "7081203969762",
+    "stock_qty": 59,
+    "image": "assets/img/mercearia/01.jpg",
+    "barcode": "3828148696834",
     "on_promo": false,
-    "promo_price": 25.78
+    "promo_price": 26.52
   },
   {
     "id": 32,
@@ -377,11 +377,11 @@
     "category": "Mercearia",
     "price": 9.9,
     "unit": "kg",
-    "stock_qty": 10,
-    "image": "https://images.unsplash.com/photo-1525253086316-d0c936c814f8?auto=format&fit=crop&w=800&q=60",
-    "barcode": "0231497094016",
-    "on_promo": false,
-    "promo_price": 8.1
+    "stock_qty": 29,
+    "image": "assets/img/mercearia/02.jpg",
+    "barcode": "1015622467574",
+    "on_promo": true,
+    "promo_price": 5.94
   },
   {
     "id": 33,
@@ -389,10 +389,10 @@
     "category": "Mercearia",
     "price": 4.99,
     "unit": "kg",
-    "stock_qty": 71,
-    "image": "https://images.unsplash.com/photo-1525253086316-d0c936c814f8?auto=format&fit=crop&w=800&q=60",
-    "barcode": "7988877081120",
-    "on_promo": true,
+    "stock_qty": 57,
+    "image": "assets/img/mercearia/03.jpg",
+    "barcode": "9159365072519",
+    "on_promo": false,
     "promo_price": 2.99
   },
   {
@@ -401,11 +401,11 @@
     "category": "Mercearia",
     "price": 18.9,
     "unit": "un.",
-    "stock_qty": 16,
-    "image": "https://images.unsplash.com/photo-1525253086316-d0c936c814f8?auto=format&fit=crop&w=800&q=60",
-    "barcode": "5227155057078",
+    "stock_qty": 61,
+    "image": "assets/img/mercearia/04.jpg",
+    "barcode": "2318517968620",
     "on_promo": false,
-    "promo_price": 15.2
+    "promo_price": 14.67
   },
   {
     "id": 35,
@@ -413,9 +413,9 @@
     "category": "Mercearia",
     "price": 7.49,
     "unit": "un.",
-    "stock_qty": 53,
-    "image": "https://images.unsplash.com/photo-1525253086316-d0c936c814f8?auto=format&fit=crop&w=800&q=60",
-    "barcode": "0401126668097",
+    "stock_qty": 41,
+    "image": "assets/img/mercearia/05.jpg",
+    "barcode": "6368891203851",
     "on_promo": false,
     "promo_price": 4.49
   },
@@ -425,11 +425,11 @@
     "category": "Mercearia",
     "price": 5.49,
     "unit": "un.",
-    "stock_qty": 29,
-    "image": "https://images.unsplash.com/photo-1525253086316-d0c936c814f8?auto=format&fit=crop&w=800&q=60",
-    "barcode": "3607365703347",
+    "stock_qty": 54,
+    "image": "assets/img/mercearia/06.jpg",
+    "barcode": "3460682756171",
     "on_promo": true,
-    "promo_price": 4.18
+    "promo_price": 3.29
   },
   {
     "id": 37,
@@ -437,10 +437,10 @@
     "category": "Mercearia",
     "price": 3.99,
     "unit": "un.",
-    "stock_qty": 38,
-    "image": "https://images.unsplash.com/photo-1525253086316-d0c936c814f8?auto=format&fit=crop&w=800&q=60",
-    "barcode": "2195387828632",
-    "on_promo": false,
+    "stock_qty": 62,
+    "image": "assets/img/mercearia/07.jpg",
+    "barcode": "3103178189441",
+    "on_promo": true,
     "promo_price": 2.39
   },
   {
@@ -449,9 +449,9 @@
     "category": "Mercearia",
     "price": 6.49,
     "unit": "kg",
-    "stock_qty": 16,
-    "image": "https://images.unsplash.com/photo-1525253086316-d0c936c814f8?auto=format&fit=crop&w=800&q=60",
-    "barcode": "2933224931073",
+    "stock_qty": 47,
+    "image": "assets/img/mercearia/08.jpg",
+    "barcode": "5818891076043",
     "on_promo": false,
     "promo_price": 3.89
   },
@@ -461,10 +461,10 @@
     "category": "Mercearia",
     "price": 2.99,
     "unit": "kg",
-    "stock_qty": 41,
-    "image": "https://images.unsplash.com/photo-1525253086316-d0c936c814f8?auto=format&fit=crop&w=800&q=60",
-    "barcode": "1786582640511",
-    "on_promo": true,
+    "stock_qty": 25,
+    "image": "assets/img/mercearia/09.jpg",
+    "barcode": "0640080219376",
+    "on_promo": false,
     "promo_price": 1.79
   },
   {
@@ -473,11 +473,11 @@
     "category": "Mercearia",
     "price": 5.29,
     "unit": "un.",
-    "stock_qty": 23,
-    "image": "https://images.unsplash.com/photo-1525253086316-d0c936c814f8?auto=format&fit=crop&w=800&q=60",
-    "barcode": "6452965835526",
+    "stock_qty": 41,
+    "image": "assets/img/mercearia/10.jpg",
+    "barcode": "6616600463622",
     "on_promo": false,
-    "promo_price": 4.77
+    "promo_price": 3.17
   },
   {
     "id": 41,
@@ -485,11 +485,11 @@
     "category": "Bebidas",
     "price": 9.99,
     "unit": "L",
-    "stock_qty": 8,
-    "image": "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=800&q=60",
-    "barcode": "8631224970279",
-    "on_promo": true,
-    "promo_price": 9.01
+    "stock_qty": 36,
+    "image": "assets/img/bebidas/01.jpg",
+    "barcode": "8186794801688",
+    "on_promo": false,
+    "promo_price": 8.54
   },
   {
     "id": 42,
@@ -497,11 +497,11 @@
     "category": "Bebidas",
     "price": 8.49,
     "unit": "L",
-    "stock_qty": 4,
-    "image": "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=800&q=60",
-    "barcode": "8701172543860",
+    "stock_qty": 36,
+    "image": "assets/img/bebidas/02.jpg",
+    "barcode": "9970268360592",
     "on_promo": true,
-    "promo_price": 6.8
+    "promo_price": 5.7
   },
   {
     "id": 43,
@@ -509,9 +509,9 @@
     "category": "Bebidas",
     "price": 3.49,
     "unit": "L",
-    "stock_qty": 55,
-    "image": "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=800&q=60",
-    "barcode": "1278407947122",
+    "stock_qty": 42,
+    "image": "assets/img/bebidas/03.jpg",
+    "barcode": "9542771166642",
     "on_promo": false,
     "promo_price": 2.09
   },
@@ -521,11 +521,11 @@
     "category": "Bebidas",
     "price": 3.99,
     "unit": "un.",
-    "stock_qty": 72,
-    "image": "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=800&q=60",
-    "barcode": "9208542869609",
-    "on_promo": false,
-    "promo_price": 3.48
+    "stock_qty": 45,
+    "image": "assets/img/bebidas/04.jpg",
+    "barcode": "4729948793978",
+    "on_promo": true,
+    "promo_price": 2.39
   },
   {
     "id": 45,
@@ -533,11 +533,11 @@
     "category": "Bebidas",
     "price": 7.9,
     "unit": "L",
-    "stock_qty": 22,
-    "image": "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=800&q=60",
-    "barcode": "8801006596205",
+    "stock_qty": 26,
+    "image": "assets/img/bebidas/05.jpg",
+    "barcode": "0989747633552",
     "on_promo": false,
-    "promo_price": 7.1
+    "promo_price": 6.43
   },
   {
     "id": 46,
@@ -545,11 +545,11 @@
     "category": "Bebidas",
     "price": 4.49,
     "unit": "L",
-    "stock_qty": 10,
-    "image": "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=800&q=60",
-    "barcode": "1333272090738",
+    "stock_qty": 47,
+    "image": "assets/img/bebidas/06.jpg",
+    "barcode": "2381852007767",
     "on_promo": false,
-    "promo_price": 2.69
+    "promo_price": 3.39
   },
   {
     "id": 47,
@@ -557,11 +557,11 @@
     "category": "Bebidas",
     "price": 9.9,
     "unit": "L",
-    "stock_qty": 54,
-    "image": "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=800&q=60",
-    "barcode": "9758523163733",
-    "on_promo": true,
-    "promo_price": 5.94
+    "stock_qty": 70,
+    "image": "assets/img/bebidas/07.jpg",
+    "barcode": "2853478039991",
+    "on_promo": false,
+    "promo_price": 5.96
   },
   {
     "id": 48,
@@ -569,11 +569,11 @@
     "category": "Bebidas",
     "price": 9.69,
     "unit": "L",
-    "stock_qty": 34,
-    "image": "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=800&q=60",
-    "barcode": "4146801054494",
+    "stock_qty": 33,
+    "image": "assets/img/bebidas/08.jpg",
+    "barcode": "1918001843917",
     "on_promo": true,
-    "promo_price": 5.81
+    "promo_price": 9.01
   },
   {
     "id": 49,
@@ -581,11 +581,11 @@
     "category": "Bebidas",
     "price": 9.9,
     "unit": "un.",
-    "stock_qty": 68,
-    "image": "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=800&q=60",
-    "barcode": "7615678241520",
+    "stock_qty": 73,
+    "image": "assets/img/bebidas/09.jpg",
+    "barcode": "5843579814907",
     "on_promo": false,
-    "promo_price": 6.38
+    "promo_price": 7.44
   },
   {
     "id": 50,
@@ -593,10 +593,10 @@
     "category": "Bebidas",
     "price": 12.9,
     "unit": "L",
-    "stock_qty": 76,
-    "image": "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?auto=format&fit=crop&w=800&q=60",
-    "barcode": "4405686751479",
+    "stock_qty": 78,
+    "image": "assets/img/bebidas/10.jpg",
+    "barcode": "9721148484507",
     "on_promo": false,
-    "promo_price": 11.35
+    "promo_price": 9.72
   }
 ]
