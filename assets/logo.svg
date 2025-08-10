@@ -1,0 +1,28 @@
+<svg width="320" height="80" viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5a3"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect rx="14" ry="14" width="320" height="80" fill="url(#grad)" filter="url(#shadow)"/>
+  <!-- Basket/cart icon -->
+  <g transform="translate(18,16)">
+    <rect x="0" y="20" width="52" height="24" rx="6" fill="#fff" opacity="0.9"/>
+    <path d="M4 20h44" stroke="#0ea5a3" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="18" cy="54" r="4" fill="#0ea5a3"/>
+    <circle cx="38" cy="54" r="4" fill="#0ea5a3"/>
+    <path d="M8 24l10-16M44 24L34 8" stroke="#0ea5a3" stroke-width="4" stroke-linecap="round"/>
+    <rect x="8" y="28" width="36" height="10" rx="4" fill="url(#grad2)"/>
+  </g>
+  <g transform="translate(86,50)">
+    <text font-size="28" font-family="Inter,Arial" font-weight="800" fill="#ffffff">Mercado de Bairro</text>
+  </g>
+</svg>

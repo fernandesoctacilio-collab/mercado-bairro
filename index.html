@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Mercado de Bairro — MVP</title>
+  <meta name="theme-color" content="#0ea5a3"/>
+  <link rel="manifest" href="manifest.json"/>
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <link rel="icon" type="image/png" href="assets/favicon-32.png"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/quagga@0.12.1/dist/quagga.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; }
+    .glass { background: rgba(15,23,42,.65); backdrop-filter: blur(8px); }
+    .chip { @apply inline-flex items-center px-3 py-1 rounded-full border text-sm cursor-pointer; }
+    .btn { @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-teal-500 text-white hover:bg-teal-600 transition; }
+    .btn-outline { @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-teal-500 text-teal-600 hover:bg-teal-50; }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100">
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.svg" alt="Mercado de Bairro" class="h-10 w-auto"/>
+        <span class="font-extrabold text-xl tracking-tight">Mercado de Bairro</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-4 text-slate-300">
+        <a href="#ofertas" class="hover:text-white">Ofertas</a>
+        <a href="#catalogo" class="hover:text-white">Catálogo</a>
+        <a href="#lista" class="hover:text-white">Lista</a>
+        <a href="#assinaturas" class="hover:text-white">Assinaturas</a>
+        <a href="#fidelidade" class="hover:text-white">Fidelidade</a>
+        <a href="#conta" class="hover:text-white" onclick="openAccount()">Minha Conta</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button class="btn-outline" onclick="openScanner()">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7V5a2 2 0 012-2h2M17 3h2a2 2 0 012 2v2M7 21H5a2 2 0 01-2-2v-2M21 17v2a2 2 0 01-2 2h-2M7 7h10v10H7z"/>
+          </svg>
+          Escanear
+        </button>
+        <button class="relative btn" onclick="openCart()">
+          <span>Carrinho</span>
+          <span id="cart-badge" class="absolute -top-2 -right-2 text-xs bg-orange-500 text-white px-2 py-0.5 rounded-full">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative">
+    <img src="https://images.unsplash.com/photo-1511690078903-71cb9e0f3b63?auto=format&fit=crop&w=1600&q=60" class="w-full h-[340px] object-cover opacity-50" alt="Frescor no seu dia"/>
+    <div class="absolute inset-0 flex items-center">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="glass rounded-2xl p-8 w-full md:w-2/3">
+          <h1 class="text-3xl md:text-4xl font-extrabold">Frescor, praticidade e preço justo.</h1>
+          <p class="text-slate-300 mt-2">Monte sua lista, receba ofertas personalizadas e faça seu pedido com entrega agendada.</p>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <a href="#ofertas" class="btn">Ver Ofertas da Semana</a>
+            <a href="#catalogo" class="btn-outline">Abrir Catálogo</a>
+            <button class="btn-outline" id="btn-install" onclick="installApp()">Instalar App</button>
+            <button class="btn-outline" onclick="enablePromos()">Ativar notificações</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ofertas da Semana -->
+  <section id="ofertas" class="max-w-7xl mx-auto px-4 py-10">
+    <div class="flex items-end justify-between gap-4">
+      <div>
+        <h2 class="text-2xl font-extrabold">Ofertas da Semana</h2>
+        <p class="text-slate-400">Descontos por tempo limitado. Corra e garanta!</p>
+      </div>
+      <div class="text-right">
+        <div class="text-sm text-slate-400">Termina em:</div>
+        <div id="countdown" class="font-bold text-xl">--:--:--</div>
+      </div>
+    </div>
+    <div id="offers-grid" class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
+  </section>
+
+  <!-- Promoções Personalizadas -->
+  <section id="personalizadas" class="bg-slate-800/40 border-t border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-10">
+      <h2 class="text-2xl font-extrabold">Para você</h2>
+      <p class="text-slate-400">Ofertas com base no seu histórico e perfil.</p>
+      <div id="personal-grid" class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- Catálogo -->
+  <section id="catalogo" class="max-w-7xl mx-auto px-4 py-10">
+    <h2 class="text-2xl font-extrabold">Catálogo de Produtos</h2>
+    <div class="mt-4 grid md:grid-cols-3 gap-4">
+      <div class="md:col-span-2 flex gap-2">
+        <input id="search" type="text" placeholder="Buscar produto..." class="w-full px-4 py-2 rounded-xl bg-slate-800 border border-slate-700 focus:outline-none" oninput="renderCatalog()"/>
+        <button class="btn-outline" onclick="clearSearch()">Limpar</button>
+      </div>
+      <div class="flex gap-2 overflow-x-auto">
+        <button class="chip border-slate-700" onclick="filterCategory('Todos')">Todos</button>
+        <button class="chip border-slate-700" onclick="filterCategory('Hortifruti')">Hortifruti</button>
+        <button class="chip border-slate-700" onclick="filterCategory('Padaria')">Padaria</button>
+        <button class="chip border-slate-700" onclick="filterCategory('Laticínios')">Laticínios</button>
+        <button class="chip border-slate-700" onclick="filterCategory('Açougue')">Açougue</button>
+        <button class="chip border-slate-700" onclick="filterCategory('Mercearia')">Mercearia</button>
+        <button class="chip border-slate-700" onclick="filterCategory('Bebidas')">Bebidas</button>
+        <button class="chip border-slate-700" onclick="filterCategory('Limpeza')">Limpeza</button>
+      </div>
+    </div>
+    <div id="catalog-grid" class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
+  </section>
+
+  <!-- Lista de Compras -->
+  <section id="lista" class="bg-slate-800/40 border-t border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-10">
+      <h2 class="text-2xl font-extrabold">Lista de Compras</h2>
+      <div class="mt-4 grid md:grid-cols-3 gap-4">
+        <div class="md:col-span-2">
+          <div class="flex gap-2">
+            <input id="list-input" type="text" placeholder="Adicionar item à lista..." class="w-full px-4 py-2 rounded-xl bg-slate-800 border border-slate-700"/>
+            <button class="btn" onclick="addListItem()">Adicionar</button>
+          </div>
+          <div class="mt-4">
+            <h3 class="font-bold mb-2">Sugestões frequentes</h3>
+            <div id="suggestions" class="flex flex-wrap gap-2"></div>
+          </div>
+          <ul id="shopping-list" class="mt-4 divide-y divide-slate-800"></ul>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <button class="btn-outline" onclick="clearList()">Limpar lista</button>
+            <button class="btn" onclick="addAvailableToCart()">Adicionar disponíveis ao carrinho</button>
+          </div>
+        </div>
+        <aside class="p-4 rounded-2xl bg-slate-800 border border-slate-700">
+          <h3 class="font-bold">Disponibilidade</h3>
+          <p class="text-sm text-slate-400">A lista checa automaticamente o estoque.</p>
+          <ul id="availability" class="mt-3 space-y-2"></ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Assinaturas -->
+  <section id="assinaturas" class="max-w-7xl mx-auto px-4 py-10">
+    <div class="flex items-end justify-between">
+      <div>
+        <h2 class="text-2xl font-extrabold">Compras Recorrentes</h2>
+        <p class="text-slate-400">Agende entregas periódicas dos seus itens básicos.</p>
+      </div>
+      <button class="btn-outline" onclick="openSubscriptionModal()">Nova assinatura</button>
+    </div>
+    <div id="subs-list" class="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </section>
+
+  <!-- Fidelidade -->
+  <section id="fidelidade" class="bg-slate-800/40 border-t border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 py-10">
+      <h2 class="text-2xl font-extrabold">Cartão Fidelidade</h2>
+      <p class="text-slate-400">Ganhe pontos a cada compra e troque por descontos.</p>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-800 border border-slate-700">
+          <div class="flex items-center justify-between">
+            <div>
+              <div class="text-sm text-slate-400">Seus pontos</div>
+              <div id="points" class="text-3xl font-extrabold">0</div>
+            </div>
+            <button class="btn" onclick="redeem()">Resgatar R$ 10</button>
+          </div>
+          <div class="mt-4">
+            <div class="h-3 bg-slate-700 rounded-full overflow-hidden">
+              <div id="points-bar" class="h-3 bg-orange-500 w-0"></div>
+            </div>
+            <div class="text-sm text-slate-400 mt-2">100 pontos = R$ 10 em desconto.</div>
+          </div>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-800 border border-slate-700">
+          <div class="text-sm text-slate-400">Cupom de aniversário</div>
+          <div id="birthday-coupon" class="text-xl font-bold mt-2"></div>
+          <div class="mt-3">
+            <input id="coupon-input" class="w-full px-4 py-2 rounded-xl bg-slate-900 border border-slate-700" placeholder="Código do cupom (ex.: ANIVERSARIO10)"/>
+            <button class="mt-3 btn" onclick="applyCoupon()">Aplicar cupom</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Drawer / Checkout -->
+  <div id="cart" class="fixed inset-0 hidden">
+    <div class="absolute inset-0 bg-black/60" onclick="closeCart()"></div>
+    <aside class="absolute right-0 top-0 h-full w-full sm:w-[480px] bg-white text-slate-900 p-6 overflow-y-auto">
+      <div class="flex items-center justify-between">
+        <h3 class="text-xl font-extrabold">Seu carrinho</h3>
+        <button onclick="closeCart()" class="text-slate-500 hover:text-slate-900">Fechar</button>
+      </div>
+      <ul id="cart-items" class="mt-4 space-y-3"></ul>
+      <div class="mt-6 border-t pt-4 space-y-3">
+        <div class="flex items-center gap-2">
+          <label class="font-semibold">Entrega ou retirada:</label>
+          <select id="delivery-mode" class="px-3 py-2 rounded-xl border w-full" onchange="updateTotals()">
+            <option value="delivery">Entrega</option>
+            <option value="pickup">Retirada na loja</option>
+          </select>
+        </div>
+        <div id="delivery-options" class="space-y-2">
+          <div>
+            <label class="font-semibold">Bairro</label>
+            <select id="bairro" class="px-3 py-2 rounded-xl border w-full" onchange="updateTotals()">
+              <option value="Centro">Centro (R$ 5,00)</option>
+              <option value="Vila São José">Vila São José (R$ 7,00)</option>
+              <option value="Vargem Grande">Vargem Grande (R$ 10,00)</option>
+              <option value="Zona Rural">Zona Rural (R$ 15,00)</option>
+            </select>
+          </div>
+          <div>
+            <label class="font-semibold">Agendamento</label>
+            <input id="schedule" type="datetime-local" class="px-3 py-2 rounded-xl border w-full"/>
+          </div>
+          <div>
+            <label class="font-semibold">Endereço</label>
+            <input id="address" class="px-3 py-2 rounded-xl border w-full" placeholder="Rua, número, complemento"/>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <label class="font-semibold">Pagamento:</label>
+          <select id="payment" class="px-3 py-2 rounded-xl border w-full" onchange="togglePix()">
+            <option value="pix">PIX (online)</option>
+            <option value="card">Cartão (na entrega)</option>
+            <option value="cash">Dinheiro (na entrega)</option>
+          </select>
+        </div>
+        <div id="pix-box" class="hidden border rounded-xl p-3">
+          <div id="qrcode" class="mx-auto"></div>
+          <div class="text-xs text-slate-600 break-all mt-2" id="pix-code"></div>
+        </div>
+        <div class="text-sm text-slate-600">
+          <div class="flex justify-between"><span>Subtotal</span><span id="subtotal">R$ 0,00</span></div>
+          <div class="flex justify-between"><span>Entrega</span><span id="shipping">R$ 0,00</span></div>
+          <div class="flex justify-between"><span>Descontos</span><span id="discounts">- R$ 0,00</span></div>
+          <div class="flex justify-between font-bold text-slate-900"><span>Total</span><span id="total">R$ 0,00</span></div>
+        </div>
+        <div class="flex gap-2">
+          <button class="btn w-full" onclick="finalize()">Finalizar pedido</button>
+          <a id="wa-share" target="_blank" class="btn-outline w-full text-center">Enviar no WhatsApp</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Scanner Modal -->
+  <div id="scanner" class="fixed inset-0 hidden">
+    <div class="absolute inset-0 bg-black/80" onclick="closeScanner()"></div>
+    <div class="absolute inset-0 flex items-center justify-center p-6">
+      <div class="bg-slate-900 border border-slate-700 rounded-2xl w-full max-w-lg p-4">
+        <div class="flex items-center justify-between">
+          <h3 class="text-xl font-extrabold">Leitor de Código de Barras</h3>
+          <button onclick="closeScanner()">Fechar</button>
+        </div>
+        <div id="scanner-area" class="mt-3 rounded-xl overflow-hidden bg-black">
+          <div id="interactive" class="viewport w-full h-72"></div>
+        </div>
+        <div id="scan-result" class="mt-3 text-sm text-slate-300"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Account Modal -->
+  <div id="account" class="fixed inset-0 hidden">
+    <div class="absolute inset-0 bg-black/60" onclick="closeAccount()"></div>
+    <div class="absolute inset-0 flex items-center justify-center p-6">
+      <div class="bg-white text-slate-900 rounded-2xl w-full max-w-lg p-6">
+        <div class="flex items-center justify-between">
+          <h3 class="text-xl font-extrabold">Minha Conta</h3>
+          <button onclick="closeAccount()">Fechar</button>
+        </div>
+        <div class="grid md:grid-cols-2 gap-3 mt-3">
+          <input id="acc-name" class="px-3 py-2 rounded-xl border" placeholder="Nome completo"/>
+          <input id="acc-phone" class="px-3 py-2 rounded-xl border" placeholder="Telefone (WhatsApp)"/>
+          <input id="acc-birth" type="date" class="px-3 py-2 rounded-xl border"/>
+          <input id="acc-addr" class="px-3 py-2 rounded-xl border md:col-span-2" placeholder="Endereço padrão"/>
+        </div>
+        <button class="btn mt-4" onclick="saveAccount()">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="max-w-7xl mx-auto px-4 py-10 text-slate-400">
+    <div class="flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.svg" class="h-8" alt="Logo"/>
+        <span>Mercado de Bairro © 2025</span>
+      </div>
+      <div class="text-sm">Instalável: adicione à tela inicial • PWA</div>
+    </div>
+  </footer>
+
+  <script src="scripts/app.js" defer></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('sw.js'));
+    }
+  </script>
+</body>
+</html>
